@@ -41,3 +41,45 @@ Wir kennen das Problem und zeigen euch mögliche Lösungen.
 - Terence: Fotos von Vortrag + Gebäude (Frank)
 - Terence: Code für Vortrag - licence? (Frank)
 - Jonas: Das ins Github
+
+## Was wollen wir zeigen?
+- Priority
+  - Priority von einzelnen Steps
+- Exampletable
+  - mehr als eine Eingabe
+  - Eingaben und Resultate stehen in der Tabelle
+- Web-Site
+  - 3 Felder mit 1 Button
+  - Button --> funktion (Primitives [Addition, String-Concat, String-Reverse])
+  - weitere Seite representiert das Ergebnis
+- Parametervariants
+  - Optionale Parameter
+  - Gleiches Beispiel nur mit einem Parameter (research, ob gut representiert)
+- Given Stories
+  - research
+  - andere Stories nutzen für andere Stories
+- Composites
+  - Matching zu Exampletables
+  - Step, Step, Step --> Composite
+- Converter
+  - JsonMap
+  - JsonList
+- UserInteraction
+  - Cache für Variablen
+  - Seitenelemente
+- MetaFilter
+  - Properties
+  - Ausführen von speziellen Tests
+- Mock (optional)
+  - REST-Service
+  - Steps setzen Werte im Mock
+  - Anwendung speichert Ergebnis in Mock
+
+## Code-View
+- Live Program 
+  - first Steps mit autocompletion
+  - Vorbereitete Advanced Steps
+
+## Service
+- Namenseingabe --> weiter --> Name auf der nächsten Seite
+- Eingabe 3 Werte --> Berechnung Summe --> Summe wird angezeigt
