@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
+import java.math.BigDecimal;
+
 @Controller
 @SessionAttributes(value = {"person", "calcResult"})
 public class CalculationController {
@@ -16,8 +18,12 @@ public class CalculationController {
     }
 
     @PostMapping("/calculate")
-    public String calculate(final CalculationForm calculationForm) {
-
+    public String calculate(final CalculationForm calculationForm, Model model) {
+        BigDecimal calcResult = calculationForm
+                .getValue1()
+                .add(calculationForm.getValue2())
+                .add(calculationForm.getValue3());
+        model.addAttribute("calcResult", calcResult);
         return "redirect:calculation-result.html";
     }
 
