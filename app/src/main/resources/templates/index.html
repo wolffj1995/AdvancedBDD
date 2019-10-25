@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="de" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" th:href="@{bootstrap/css/bootstrap.min.css}">
+
+    <title th:text="#{page.title}"></title>
+</head>
+<body>
+<div class="container-fluid">
+    <h1 th:text="#{welcome.message}">Hello, World!</h1>
+
+    <form th:action="@{/}"  th:object="${person}" method="POST">
+        <div class="form-group">
+            <label for="nameInput">Bitte geben Sie Ihren Namen ein</label>
+            <input type="text" class="form-control" id="nameInput" name="name" aria-describedby="nameHelp" placeholder="Ihr Name">
+        </div>
+        <button type="submit" class="btn btn-primary" id="submitButton">Weiter</button>
+    </form>
+</div>
+<!-- Optional JavaScript -->
+<script th:src="@{bootstrap/js/bootstrap.bundle.js}"></script>
+</body>
+</html>

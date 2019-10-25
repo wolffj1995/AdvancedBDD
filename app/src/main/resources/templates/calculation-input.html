@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="de" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" th:href="@{bootstrap/css/bootstrap.min.css}">
+
+    <title th:text="#{page.title}"></title>
+</head>
+<body>
+<div class="container-fluid">
+    <h1>Hallo <strong th:text="${person.name}" id="name"></strong></h1>
+
+    <form th:action="@{/calculate}" th:object="${calculationForm}" method="POST">
+        <div class="form-group">
+            <label for="value1Input">Bitte geben Sie einen Wert ein</label>
+            <input type="number" class="form-control" id="value1Input" name="value1" placeholder="Wert 1">
+        </div>
+        <div class="form-group">
+            <label for="value2Input">Bitte geben Sie einen Wert ein</label>
+            <input type="number" class="form-control" id="value2Input" name="value2" placeholder="Wert 2">
+        </div>
+        <div class="form-group">
+            <label for="value3Input">Bitte geben Sie einen Wert ein</label>
+            <input type="number" class="form-control" id="value3Input" name="value3" placeholder="Wert 3">
+        </div>
+        <button type="submit" class="btn btn-primary" id="submitButton">Berechnen</button>
+    </form>
+</div>
+<!-- Optional JavaScript -->
+<script th:src="@{bootstrap/js/bootstrap.bundle.js}"></script>
+</body>
+</html>
