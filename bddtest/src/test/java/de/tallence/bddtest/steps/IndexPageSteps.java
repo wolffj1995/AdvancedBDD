@@ -18,7 +18,7 @@ public class IndexPageSteps extends SeleniumSteps {
     @Autowired
     private TestProperties testProperties;
 
-    @When("enter name $name")
+    @When(value = "enter name $name")
     public void enterName(final String name) {
         IndexPage indexPage = getCurrentPage();
         indexPage.setNameInput(name);
@@ -30,7 +30,7 @@ public class IndexPageSteps extends SeleniumSteps {
         indexPage.submit();
     }
 
-    @When("enter name $name and submit")
+    @When(value = "enter name $name and submit", priority = 1)
     @Composite(steps = {"When enter name <name>", "When submit name"})
     public void enterNameAndSubmit(final String name) {
     }

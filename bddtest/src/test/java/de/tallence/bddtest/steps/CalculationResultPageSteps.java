@@ -28,7 +28,7 @@ public class CalculationResultPageSteps extends SeleniumSteps {
         assertTrue(calculationResultPage.resultMatches(Pattern.compile(result)));
     }
 
-    @Then("the result equals $result on resultPage")
+    @Then("the result {equals|is} $result on resultPage")
     public void resultEquals(final String result) {
         CalculationResultPage calculationResultPage = getCurrentPage();
         assertTrue(calculationResultPage.resultEquals(result));

@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 public class TestProperties {
 
     @Value("${jbehave.writeReports}")
-    public boolean jBehaveWriteReports = true;
+    public boolean jBehaveWriteReports = false;
 
     @Value("${jbehave.metaFilter}")
     public String jBehaveMetaFilter;

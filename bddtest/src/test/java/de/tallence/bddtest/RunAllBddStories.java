@@ -34,8 +34,6 @@ public class RunAllBddStories extends RunAllStories {
     public Embedder configuredEmbedder() {
         Embedder embedder = super.configuredEmbedder();
         embedder = AbstractBddStory.configureEmbedder(embedder, getApplicationContext());
-        embedder.runStoriesAsPaths(new StoryFinder().findPaths(CodeLocations.codeLocationFromClass(this.getClass()),
-                "**/*.story", null));
         return embedder;
     }
 

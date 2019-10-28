@@ -8,6 +8,8 @@ import de.telekom.test.bddwebapp.stories.AbstractStory;
 import org.jbehave.core.configuration.Configuration;
 import org.jbehave.core.embedder.Embedder;
 import org.jbehave.core.failures.BatchFailures;
+import org.jbehave.core.io.CodeLocations;
+import org.jbehave.core.io.StoryFinder;
 import org.jbehave.core.reporters.ReportsCount;
 import org.jbehave.core.steps.InjectableStepsFactory;
 import org.jbehave.core.steps.ParameterConverters;
@@ -34,7 +36,6 @@ public abstract class AbstractBddStory extends AbstractStory {
 
         embedder.embedderControls().useStoryTimeouts(testProperties.jBehaveStoryTimeout);
 
-
         if (!testProperties.jBehaveWriteReports) {
             embedder.embedderControls().doGenerateViewAfterStories(false);
         }
@@ -52,7 +53,10 @@ public abstract class AbstractBddStory extends AbstractStory {
             }
         });
 
+
         return embedder;
+
+
     }
 
 
@@ -90,7 +94,7 @@ public abstract class AbstractBddStory extends AbstractStory {
             configuration.useStoryReporterBuilder(null);
         }
 
-        configuration.useStoryReporterBuilder(new JBehaveContextStoryReporterBuilder(configuration.storyReporterBuilder()));
+        configuration.useStoryReporterBuilder(  new JBehaveContextStoryReporterBuilder(configuration.storyReporterBuilder()));
 
 //        configuration.usePendingStepStrategy(new FailingUponPendingStep());
 

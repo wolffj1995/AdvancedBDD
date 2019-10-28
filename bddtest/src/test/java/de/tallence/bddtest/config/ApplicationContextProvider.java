@@ -45,7 +45,7 @@ public class ApplicationContextProvider {
         //
         for (String activeProfile : activeProfiles) {
             sources = addPropertySource(sources, TEST_PROPERTIES_NAME +  "-" + activeProfile +".properties");
-            //sources = addPropertySource(sources, TEST_DATA_PROPERTIES_NAME +  "-" + activeProfile +".properties");
+            sources = addPropertySource(sources, TEST_DATA_PROPERTIES_NAME +  "-" + activeProfile +".properties");
         }
 
         // add configuration (annotated with componentscan)

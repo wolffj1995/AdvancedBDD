@@ -30,7 +30,7 @@ public class CalculationInputPageSteps extends SeleniumSteps {
     }
 
     @When("input field 3 $value")
-    public void inputField3(final String value) {
+    public void inputField3(final String  value) {
         CalculationInputPage calculationInputPage = getCurrentPage();
         calculationInputPage.setValue3Input(value);
     }

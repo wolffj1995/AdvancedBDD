@@ -11,7 +11,11 @@ import java.util.Set;
 @Component
 public class TestDataProperties {
 
+    @Value("${name1}")
+    private String name1;
 
+    @Value("${name2}")
+    private String name2;
 
     public String getValueOfKey(String key) throws IllegalAccessException {
         Set<Field> fieldsWithValueAnnotation = findFieldsWithAnnotation();
