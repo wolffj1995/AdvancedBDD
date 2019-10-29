@@ -1,12 +1,16 @@
 Narrative:
-
+    test full webApp flow
 
     Scenarios:
-        01 -
+        01 - dummy
+        02 - GivenStories
+        03 - PatternVariants
+        04 - ExampleTables
 
 Scenario: 01 - dummy
 Meta:
 @Id1
+@smokeTest
 
 Given the index page is called
 Then the IndexPage is shown
@@ -39,7 +43,6 @@ Scenario: 03 - PatternVariants
 Meta:
 @Id3
 
-
 GivenStories: de/tallence/bddtest/stories/name_input.story#{Id2:scenario2}
 When input field 1 1
 And input field 2 1
@@ -52,7 +55,6 @@ Then the result equals 3 on resultPage
 
 Scenario: 04 - ExampleTables
 Meta:
-@Jonas
 @Id4
 
 Given the index page is called

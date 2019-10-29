@@ -15,6 +15,7 @@ import org.springframework.core.env.PropertiesPropertySource;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import static java.util.stream.Collectors.toList;
 
@@ -40,6 +41,8 @@ public class CommonSteps extends SeleniumSteps {
 
     @BeforeScenario
     public void beforeScenario() {
+        webDriverWrapper.getDriver().manage().deleteAllCookies();
+        webDriverWrapper.getDriver().manage().timeouts().pageLoadTimeout(5,TimeUnit.SECONDS);
     }
 
     private void copyPropertySource(String prefix, String propertySourceName) {

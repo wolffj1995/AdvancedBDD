@@ -20,7 +20,6 @@ Then the name matches Spongebob on inputPage
 Scenario: 02 - dataSet
 Meta:
 @Id2 scenario2
-@Jonas
 
 Given the index page is called
 Then the IndexPage is shown
@@ -35,13 +34,13 @@ Meta:
 
 Given the index page is called
 Given the cache filled with {
-    "coolerName":"Eugene H. Krabs"
+    "coolName":"Eugene H. Krabs"
 }
 Then the IndexPage is shown
-When enter name $coolerName
+When enter name $coolName
 When submit name
 Then the CalculationInputPage is shown
-Then the name matches $coolerName on inputPage
+Then the name matches $coolName on inputPage
 
 Scenario: 04 - Composites
 Meta:
