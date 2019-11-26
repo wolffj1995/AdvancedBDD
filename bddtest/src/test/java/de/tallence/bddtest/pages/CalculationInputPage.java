@@ -3,6 +3,7 @@ package de.tallence.bddtest.pages;
 import de.telekom.test.bddwebapp.frontend.element.WebElementEnhanced;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.regex.Pattern;
@@ -30,27 +31,20 @@ public class CalculationInputPage extends AbstractPage {
     }
 
     public void setValue1Input(String value1Input) {
-
-        if (!this.value1Input.isDisplayed())
-            new WebDriverWait(this.driver, 60L).until((webDriver) -> this.value1Input.isDisplayed());
-        this.value1Input.setValue(value1Input);
+        setInputValue(this.value1Input, value1Input);
     }
 
     public void setValue2Input(String value2Input) {
-        if (!this.value2Input.isDisplayed())
-            new WebDriverWait(this.driver, 60L).until((webDriver) -> this.value2Input.isDisplayed());
-        this.value2Input.setValue(value2Input);
+        setInputValue(this.value2Input, value2Input);
     }
 
     public void setValue3Input(String value3Input) {
-        if (!this.value3Input.isDisplayed())
-            new WebDriverWait(this.driver, 60L).until((webDriver) -> this.value3Input.isDisplayed());
-        this.value3Input.setValue(value3Input);
+        setInputValue(this.value3Input, value3Input);
     }
 
     public void submit() {
-        if (!this.submitButton.isDisplayed())
-            new WebDriverWait(this.driver, 60L).until((webDriver) -> this.submitButton.isDisplayed());
+        this.submitButton.waitForDisplayed(60);
+        this.submitButton.waitForExisting(60);
         this.submitButton.click();
     }
 

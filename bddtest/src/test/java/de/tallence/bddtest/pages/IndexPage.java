@@ -22,7 +22,7 @@ public class IndexPage extends AbstractPage {
     }
 
     public void setNameInput(String name) {
-        this.nameInput.setValue(name);
+        setInputValue(nameInput,name);
     }
 
     public void submit() {
